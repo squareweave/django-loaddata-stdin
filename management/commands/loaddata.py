@@ -26,13 +26,16 @@ class Command(loaddata.Command):
         return super().handle(*args, **options)
 
     def parse_name(self, fixture_name):
-        if not self.format:
-            raise CommandError("Must specify format when reading from stdin")
-
         self.compression_formats['stdin'] = (lambda x, y: sys.stdin, None)
 
         if fixture_name == '-':
+            if not self.format:
+                raise CommandError(
+                    "Must specify format when reading from stdin")
+
             return '-', self.format, 'stdin'
+        else:
+            return super().parse_name(fixture_name)
 
     def find_fixtures(self, fixture_label):
         if fixture_label == '-':
