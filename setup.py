@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django_loaddata_stdin",
-    version="0.0.1",
+    version="0.0.2",
     description="Django module to load data from stdin",
     url='https://github.com/squareweave/django-loaddata-stdin',
     author='Squareweave',
