@@ -20,6 +20,6 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],
-    packages=find_packages('django_loaddata_stdin'),
+    packages=find_packages(),
     install_requires=['django >= 1.8'],
 )
