@@ -1,4 +1,4 @@
-from unittest.mock import patch
+from mock import patch
 
 from django.test import TestCase
 from django.utils.six import BytesIO
@@ -14,7 +14,8 @@ YAML_FIXTURE = b"""
 """
 
 
-@patch('django_loaddata_stdin.management.commands.loaddata.sys.stdin', BytesIO(YAML_FIXTURE))
+@patch('django_loaddata_stdin.management.commands.loaddata.sys.stdin',
+       BytesIO(YAML_FIXTURE))
 class LoadDataTest(TestCase):
     def test_command(self):
         argv = ['', 'loaddata', '--format=yaml', '-']
