@@ -1,6 +1,7 @@
 """
 Extension for loaddata
 """
+from future.builtins import super
 
 import sys
 
@@ -41,4 +42,4 @@ class Command(loaddata.Command):
         if fixture_label == '-':
             return [('-', None, '-')]
 
-        return super(Command, self).find_fixtures(fixture_label)
+        return super().find_fixtures(fixture_label)

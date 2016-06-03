@@ -1,2 +1,5 @@
 /build/
 /django_loaddata_stdin.egg-info/
+*.py[co]
+__pycache__
+*.sw[pon]
