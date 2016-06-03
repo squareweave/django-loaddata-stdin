@@ -4,4 +4,6 @@ mock
 tox
 
 pylint
+pylint_mccabe
+pylint_django
 pep8
