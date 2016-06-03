@@ -1,2 +1,4 @@
 Django >= 1.8
 future
+
+setuptools-scm

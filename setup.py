@@ -1,10 +1,12 @@
 from setuptools import setup, find_packages
 
 with open('README.md') as readme, \
-     open('requirements.txt') as requirements:
+     open('requirements.txt') as requirements, \
+     open('test_requirements.txt') as test_requirements:
     setup(
+        setup_requires=['setuptools_scm'],
+        use_scm_version=True,
         name="django_loaddata_stdin",
-        version="0.0.4",
         description="Django module to load data from stdin",
         long_description=readme.read(),
         url='https://github.com/squareweave/django-loaddata-stdin',
@@ -23,4 +25,7 @@ with open('README.md') as readme, \
         ],
         packages=find_packages(),
         install_requires=requirements.readlines(),
+
+        test_suite='django_loaddata_stdin.tests',
+        tests_require=test_requirements.readlines(),
     )
