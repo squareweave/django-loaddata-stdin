@@ -1,3 +1,7 @@
+"""
+Test apps settings.
+"""
+
 import os
 
 

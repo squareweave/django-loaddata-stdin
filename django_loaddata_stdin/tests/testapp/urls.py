@@ -1,7 +1,3 @@
-from django.conf.urls import patterns, include, url
+"""URLs for testapp."""
 
-
-urlpatterns = patterns(
-    '',
-    # url(r'^admin/', include(admin.site.urls)),
-)
+urlpatterns = ()

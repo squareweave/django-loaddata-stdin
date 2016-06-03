@@ -1,9 +1,9 @@
 """
 Extension for loaddata
 """
-from future.builtins import super
-
 import sys
+
+from future.builtins import super  # pylint:disable=redefined-builtin
 
 from django.core.management.commands import loaddata
 from django.core.management.base import CommandError
